@@ -15,9 +15,9 @@ class CreatePokemonsTable extends Migration
     {
         Schema::create('pokemons', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable()->unique();
-            $table->text('description')->nullable();
-            $table->integer('pokedex_number')->nullable();
+            $table->string('name');
+            $table->text('description');
+            $table->integer('pokedex_number');
             $table->timestamps();
         });
     }
