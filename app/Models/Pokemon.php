@@ -15,4 +15,9 @@ class Pokemon extends Model
         'description',
         'pokedex_number',
     ];
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }
