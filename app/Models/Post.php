@@ -13,4 +13,9 @@ class Post extends Model
         'body',
         'quiz_correct',
     ];
+
+    public function pokemons()
+    {
+        return $this->belongsToMany(Pokemon::class);
+    }
 }

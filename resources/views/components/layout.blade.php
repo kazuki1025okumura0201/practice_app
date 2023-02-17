@@ -7,6 +7,9 @@
 </head>
 <body>
     <div class="container">
+        <h1>
+            <a href="{{ route('posts.index') }}">タイトル</a>
+        </h1>
         {{ $slot }}
     </div>
 </body>

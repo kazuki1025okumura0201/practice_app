@@ -16,3 +16,12 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index'])
     ->name('posts.index');
+
+Route::get('/quiz', [PostController::class, 'quiz'])
+    ->name('posts.quiz');
+
+Route::get('/posts/create/{post}', [PostController::class, 'create'])
+    ->name('posts.create');
+
+Route::post('/posts/store', [PostController::class, 'store'])
+    ->name('posts.store');
