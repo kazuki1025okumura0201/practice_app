@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::with('pokemons')->get();
 
         return view('posts.index')
             ->with(['posts' => $posts]);
@@ -31,13 +31,26 @@ class PostController extends Controller
 
     public function create($choice)
     {
-        $hoge = Pokemon::find($choice);
+        $pokemon = Pokemon::find($choice);
+
         return view('posts.create')
-            ->with(['choice' => $hoge]);
+            ->with(['choice' => $pokemon]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $pokemonId = $request->input('pokemon-id');
 
+
+        $post = new Post();
+        $post->body = $request->body;
+        $post->quiz_correct = 1;
+        $post->save();
+
+        // postとpokemonのリレーションデータを作成
+        $post->pokemons()->attach($pokemonId);
+
+        return redirect()
+            ->route('posts.index');
     }
 }
