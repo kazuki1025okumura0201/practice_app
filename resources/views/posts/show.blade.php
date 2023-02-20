@@ -16,10 +16,14 @@
             {{ $post_has_pokemon->name }}
         </div>
         <div>
-            <img src="{{ asset($post_has_pokemon->image) }}">
+            {{-- <img src="{{ asset($post_has_pokemon->image) }}"> --}}
+            写真
         </div>
         <div>
             {{ $post_has_pokemon->description }}
         </div>
     @endforeach
+    <a href="{{ route('posts.edit', ['post' => $post]) }}">編集</a>
+    <a href="{{  }}"></a>
+
 </x-layout>
