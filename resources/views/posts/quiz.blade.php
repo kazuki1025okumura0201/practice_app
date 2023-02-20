@@ -17,7 +17,7 @@
         @endif
         <div>
             {{-- 選んだポケモンのデータと正誤判定をcreateアクションに渡す --}}
-            <a href="{{ route('posts.create', ['post' => $correctPokemon, 'result' => "$count"]) }}">
+            <a href="{{ route('posts.create', ['choicedPokemonId' => $correctPokemon, 'quizResult' => "$count"]) }}">
                 {{ $choice->name }}
             </a>
         </div>

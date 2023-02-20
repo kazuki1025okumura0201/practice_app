@@ -20,8 +20,20 @@ Route::get('/', [PostController::class, 'index'])
 Route::get('/quiz', [PostController::class, 'quiz'])
     ->name('posts.quiz');
 
-Route::get('/posts/create/{pokemonId}/{quizResult}', [PostController::class, 'create'])
+Route::get('/posts/create/{choicedPokemonId}/{quizResult}', [PostController::class, 'create'])
     ->name('posts.create');
 
 Route::post('/posts/store', [PostController::class, 'store'])
     ->name('posts.store');
+
+Route::get('/posts/{post}', [PostController::class, 'show'])
+    ->name('posts.show');
+
+Route::get('/posts/{post}/edit', [PostController::class, 'edit'])
+    ->name('posts.edit');
+
+Route::patch('/posts/{post}/update', [PostController::class, 'update'])
+    ->name('posts.update');
+
+Route::delete('/posts/{post}/destroy', [PostController::class, 'destroy'])
+    ->name('posts.destroy');

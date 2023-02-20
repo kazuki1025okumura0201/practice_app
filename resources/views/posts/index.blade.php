@@ -18,6 +18,9 @@
                 @endforeach
                 <div>{{ $post->body }}</div>
             </div>
+            <div>
+                <a href="{{ route('posts.show', ['post' => $post]) }}">詳細を見る</a>
+            </div>
         @endforeach
     </div>
 </x-layout>
