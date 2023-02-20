@@ -2,32 +2,40 @@
     <x-slot name="title">
         投稿詳細
     </x-slot>
-    <div>
+    <h2 class="items-center mt-l">
         <span>{{ $post->quiz_correct }} 問正解しました！</span>
-        投稿日時{{ date("Y年n月j日",strtotime($post->created_at)) }}
+        <span class="ml-5">投稿日時{{ date("Y年n月j日",strtotime($post->created_at)) }}</span>
+    </h2>
+    <div class="items-center">
+        <b>メッセージ</b>
     </div>
-    <div>
-        <div>メッセージ</div>
-        {{ $post->body }}
+    <div class="items-center">
+        <div>{{ $post->body }}</div>
     </div>
-    @foreach ($post->pokemons as $post_has_pokemon)
-        <div>
-            <span>No.{{ $post_has_pokemon->pokedex_number }}</span>
-            {{ $post_has_pokemon->name }}
+    <div class="mt-l">
+        @foreach ($post->pokemons as $post_has_pokemon)
+        <div class="items-center">
+            <div>
+                <span>No.{{ $post_has_pokemon->pokedex_number }}</span>
+                {{ $post_has_pokemon->name }}
+            </div>
         </div>
-        <div>
-            {{-- <img src="{{ asset($post_has_pokemon->image) }}"> --}}
-            写真
+        <div class="items-center mb-10">
+            <div>
+                <img src="{{ asset($post_has_pokemon->image) }}" class="image-size">
+            </div>
         </div>
-        <div>
+        <div class="mx-m border p-10">
             {{ $post_has_pokemon->description }}
         </div>
-    @endforeach
-    <a href="{{ route('posts.edit', ['post' => $post]) }}">編集</a>
-    <form method="post" action="{{ route('posts.destroy', $post) }}">
-        @method('DELETE')
-        @csrf
-        <button type="submit" class="btn">削除</button>
-    </form>
-
+        @endforeach
+    </div>
+    <div class="align-right flex-end mr-l">
+        <a href="{{ route('posts.edit', ['post' => $post]) }}" class="edit-btn">編集</a>
+        <form method="post" action="{{ route('posts.destroy', $post) }}" class="ml-5">
+            @method('DELETE')
+            @csrf
+            <button type="submit" class="delete-btn">削除</button>
+        </form>
+    </div>
 </x-layout>
