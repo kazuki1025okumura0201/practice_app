@@ -67,11 +67,19 @@ class PostController extends Controller
             ->with(['post' => $post]);
     }
 
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, Post $post)
     {
         $post->body = $request->body;
         $post->save();
         return redirect()
             ->route('posts.show', $post);
+    }
+
+    public function destroy(Post $post)
+    {
+        $post->delete();
+
+        return redirect()
+            ->route('posts.index');
     }
 }

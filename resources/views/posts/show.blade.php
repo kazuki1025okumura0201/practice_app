@@ -24,6 +24,10 @@
         </div>
     @endforeach
     <a href="{{ route('posts.edit', ['post' => $post]) }}">編集</a>
-    <a href="{{  }}"></a>
+    <form method="post" action="{{ route('posts.destroy', $post) }}">
+        @method('DELETE')
+        @csrf
+        <button type="submit" class="btn">削除</button>
+    </form>
 
 </x-layout>
