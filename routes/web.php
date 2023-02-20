@@ -20,7 +20,7 @@ Route::get('/', [PostController::class, 'index'])
 Route::get('/quiz', [PostController::class, 'quiz'])
     ->name('posts.quiz');
 
-Route::get('/posts/create/{post}', [PostController::class, 'create'])
+Route::get('/posts/create/{pokemonId}/{quizResult}', [PostController::class, 'create'])
     ->name('posts.create');
 
 Route::post('/posts/store', [PostController::class, 'store'])
