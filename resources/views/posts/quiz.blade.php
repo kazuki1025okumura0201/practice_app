@@ -2,29 +2,32 @@
     <x-slot name="title">
         クイズ
     </x-slot>
-    <div>
+    <h4 class="m-10">
         {{ $correctPokemon->description }}
-    </div>
+    </h4>
     @php
         // 正誤判定を初期化
         $count = 0;
     @endphp
-    @foreach ($choicesOfQuiz as $choice)
+    <div class="quiz-content mx-l line-height">
+        @foreach ($choicesOfQuiz as $choice)
         @if ($choice->id === $correctPokemon->id)
-            @php
+        @php
                 $count++;
-            @endphp
+                @endphp
         @endif
-        <div>
+        <div class="quiz-object">
             {{-- 選んだポケモンのデータと正誤判定をcreateアクションに渡す --}}
             <a href="{{ route('posts.create', ['choicedPokemonId' => $correctPokemon, 'quizResult' => "$count"]) }}">
-                {{ $choice->name }}
+                <div><img src="{{ asset($choice->image) }}" class="image-size"></div>
+                <div class="name-color">{{ $choice->name }}</div>
             </a>
         </div>
         @if ($count === 1)
-            @php
+        @php
                 $count--;
-            @endphp
+                @endphp
         @endif
-    @endforeach
+        @endforeach
+    </div>
 </x-layout>

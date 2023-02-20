@@ -11,3 +11,170 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.image-size {
+    height: 100%;
+    width: 100px;
+}
+
+.index-image-size {
+    height: 60px;
+    width: 60%;
+}
+
+.flex {
+    display: flex;
+}
+
+.border {
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(35, 183, 251);
+    border-radius: 10px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.ml-5 {
+    margin-left: 15px;
+}
+
+.index-post {
+    margin-left: 40px;
+
+}
+
+.show-link
+ {
+    text-align: right;
+    margin: 0 20px 20px 0;
+ }
+
+ img.title-size {
+    height: 65px;
+    width: 500px;
+ }
+
+ .items-center {
+    display: flex;
+    justify-content: center;
+ }
+
+ .mt-l {
+    margin-top: 75px;
+ }
+
+ .mt-m {
+    margin-top: 50px;
+ }
+
+ .mt-s {
+    margin-top: 30px;
+ }
+
+ a.start-quiz-link {
+    border: 5px outset #cb323f;
+    border-radius: 5px;
+    color: azure;
+    background-color: #e73c4b;
+    padding: 10px;
+ }
+
+ .m-10 {
+    margin: 50px 80px 60px 80px;
+ }
+
+ .mb-10 {
+    margin-bottom: 15px;
+ }
+
+ .name-color {
+    color: rgb(31, 32, 75);
+ }
+
+ .quiz-content {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .quiz-object {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    width: calc(33.333% - 5px);
+    height: auto;
+    margin: 20px 1px 20px 1px;
+ }
+
+.mx-l {
+    margin: 0 110px 0 150px;
+}
+
+.red {
+    color: #f85374;
+}
+
+.blue {
+    color:
+    rgb(32, 165, 253);
+}
+
+.text-box {
+    width: 400px;
+	padding: 3%;
+    border-radius: 10px;
+    border-color: rgb(15, 69, 177);
+}
+
+.submit-btn {
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(195, 245, 249);
+}
+
+.line-height {
+    line-height: 20px;
+}
+
+.mx-m {
+    margin: 0 100px 0 100px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.align-right {
+    text-align: right;
+    /* display: block; */
+}
+
+.mr-l {
+    margin-right: 120px;
+    margin-top: 20px;
+}
+
+.edit-btn {
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(75, 98, 250);
+    border-color: rgb(33, 35, 48);
+    color: aliceblue;
+}
+
+.delete-btn {
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(248, 44, 85);
+    color: aliceblue;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
