@@ -23,28 +23,29 @@ class PostController extends Controller
      */
     public function quiz()
     {
-        $choices = Pokemon::inRandomOrder()->take(6)->get();
+        $choicesOfQuiz = Pokemon::inRandomOrder()->take(6)->get();
+        $correctPokemon = $choicesOfQuiz->random();
 
         return view('posts.quiz')
-            ->with(['choices' => $choices]);
+            ->with(['choicesOfQuiz' => $choicesOfQuiz, 'correctPokemon' => $correctPokemon]);
     }
 
-    public function create($choice)
+    public function create($choicedPokemonId, $quizResult)
     {
-        $pokemon = Pokemon::find($choice);
+        $choicedPokemon = Pokemon::find($choicedPokemonId);
 
         return view('posts.create')
-            ->with(['choice' => $pokemon]);
+            ->with(['choicedPokemon' => $choicedPokemon, 'quizResult' => $quizResult]);
     }
 
     public function store(Request $request)
     {
-        $pokemonId = $request->input('pokemon-id');
+        $pokemonId = $request->input('choiced-pokemon-id');
 
 
         $post = new Post();
         $post->body = $request->body;
-        $post->quiz_correct = 1;
+        $post->quiz_correct = $request->input('quizResult');
         $post->save();
 
         // postとpokemonのリレーションデータを作成
