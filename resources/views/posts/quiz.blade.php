@@ -3,7 +3,7 @@
         クイズ
     </x-slot>
     <h4 class="m-10">
-        {{ $correctPokemon->description }}
+        {{ str_replace($correctPokemon->name, ' 〇〇 ', $correctPokemon->description) }}
     </h4>
     @php
         // 正誤判定を初期化
