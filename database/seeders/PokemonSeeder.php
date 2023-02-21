@@ -184,7 +184,7 @@ class PokemonSeeder extends Seeder
 
         Pokemon::create([
             'name' => 'バンギラス',
-            'description' => '万年雪が　積もる　山脈で　静かに　暮らす。　ブリザードを　発生させて　姿を　隠す。',
+            'description' => '片腕を　動かしただけで　山を崩し　地響きを　起こす　とてつもない　パワーを　秘める。',
             'pokedex_number' => 248,
             'image' => 'image/40.png'
         ]);
@@ -219,7 +219,7 @@ class PokemonSeeder extends Seeder
 
         Pokemon::create([
             'name' => 'ウルガモス',
-            'description' => 'まよなかに　どうたいから　ひびく　ぶきみな　なきごえは　あのよで　くるしむ　ししゃの　なきごえらしい。',
+            'description' => '暑い　土地では　燃える　体は　嫌がられるが　寒い　土地では　太陽の化身　と　崇められる。',
             'pokedex_number' => 637,
             'image' => 'image/45.png'
         ]);
@@ -296,7 +296,7 @@ class PokemonSeeder extends Seeder
 
         Pokemon::create([
             'name' => 'ルギア',
-            'description' => 'なわで　しばった　たいりくを　ひっぱって　うごかしたという　でんせつが　のこされている。',
+            'description' => 'ふかい　かいこうの　そこで　ねむる。　ルギアが　はばたくと　４０にち　あらしが　つづくと　いわれている。',
             'pokedex_number' => 249,
             'image' => 'image/56.png'
         ]);
@@ -310,7 +310,7 @@ class PokemonSeeder extends Seeder
 
         Pokemon::create([
             'name' => 'レックウザ',
-            'description' => '５００ねんいじょうまえに　つくられたじんぞうポケモン。　ひとの　ことばをりかいするが　しゃべれない。',
+            'description' => 'くもより　はるかうえの　オゾンそうに　せいそくしているため　ちじょうから　すがたを　みることは　できない。',
             'pokedex_number' => 384,
             'image' => 'image/58.png'
         ]);
