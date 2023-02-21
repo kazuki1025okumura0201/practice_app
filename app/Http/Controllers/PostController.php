@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('pokemons')->get();
+        $posts = Post::with('pokemons')->latest()->get();
 
         return view('posts.index')
             ->with(['posts' => $posts]);
@@ -67,7 +67,7 @@ class PostController extends Controller
             ->with(['post' => $post]);
     }
 
-    public function update(PostRequest $request, Post $post)
+    public function update(Request $request, Post $post)
     {
         $post->body = $request->body;
         $post->save();

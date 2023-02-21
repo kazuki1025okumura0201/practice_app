@@ -15,17 +15,17 @@
     <div class="mt-l">
         @foreach ($post->pokemons as $post_has_pokemon)
         <div class="items-center">
-            <div>
+            <b>
                 <span>No.{{ $post_has_pokemon->pokedex_number }}</span>
                 {{ $post_has_pokemon->name }}
-            </div>
+            </b>
         </div>
         <div class="items-center mb-10">
             <div>
                 <img src="{{ asset($post_has_pokemon->image) }}" class="image-size">
             </div>
         </div>
-        <div class="mx-m border p-10">
+        <div class="mx-m border-show p-10">
             {{ $post_has_pokemon->description }}
         </div>
         @endforeach

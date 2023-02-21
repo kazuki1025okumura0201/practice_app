@@ -7,8 +7,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="items-center">
-            {{-- <a href="{{ route('posts.index') }}"><img src="{{ asset('image/title.png') }}" class="title-size"></a> --}}
+        <div class="items-center mt-s">
+            <a href="{{ route('posts.index') }}"><img src="{{ asset('image/title.png') }}" class="title-size"></a>
         </div>
         {{ $slot }}
     </div>
