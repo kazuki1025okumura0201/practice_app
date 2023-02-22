@@ -11,7 +11,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('pokemons')->get();
+        $posts = Post::with('pokemons')->latest()->get();
 
         return view('posts.index')
             ->with(['posts' => $posts]);
@@ -38,10 +38,9 @@ class PostController extends Controller
             ->with(['choicedPokemon' => $choicedPokemon, 'quizResult' => $quizResult]);
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         $pokemonId = $request->input('choiced-pokemon-id');
-
 
         $post = new Post();
         $post->body = $request->body;

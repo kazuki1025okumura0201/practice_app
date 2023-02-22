@@ -17,9 +17,14 @@ h1 {
     width: 100px;
 }
 
+.create-image-size {
+    height: 100%;
+    width: 300px;
+}
+
 .index-image-size {
-    height: 60px;
-    width: 60%;
+    height: 100px;
+    width: 70%;
 }
 
 .flex {
@@ -33,6 +38,13 @@ h1 {
     border-radius: 10px;
 }
 
+.border-show {
+    border: solid;
+    border-width: 2px;
+    border-color: rgb(255, 125, 231);
+    border-radius: 3px;
+}
+
 h3 {
     display: flex;
     justify-content: center;
@@ -40,6 +52,10 @@ h3 {
 
 .ml-5 {
     margin-left: 15px;
+}
+
+.ml-10 {
+    margin-left: 40px;
 }
 
 .index-post {
@@ -84,7 +100,11 @@ h3 {
  }
 
  .m-10 {
-    margin: 50px 80px 60px 80px;
+    margin: 100px 80px 0 80px;
+ }
+
+ .m-create {
+    margin: 0 80px 0 80px;
  }
 
  .mb-10 {
@@ -112,7 +132,7 @@ h3 {
  }
 
 .mx-l {
-    margin: 0 110px 0 150px;
+    margin: 0 80px 0 180px;
 }
 
 .red {
@@ -142,7 +162,7 @@ h3 {
 }
 
 .mx-m {
-    margin: 0 100px 0 100px;
+    margin: 0 170px 0 170px;
 }
 
 .p-10 {
@@ -177,4 +197,29 @@ h3 {
 .flex-end {
     display: flex;
     justify-content: flex-end;
+}
+
+.mx-index {
+    margin: 0 80px 0 80px;
+}
+
+.edit-color
+ {
+    color: rgb(48, 47, 50);
+ }
+
+.name-size {
+    font-size: 28px;
+}
+
+.mr-s {
+    margin-right: 160px;
+}
+
+.footer {
+    max-width: 100%;
+}
+
+.pb-10 {
+    padding-bottom: 60px;
 }

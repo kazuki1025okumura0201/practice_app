@@ -10,13 +10,13 @@
         @endif
    </h1>
     <div class="my-5 mt-m">
-        <h4 class="items-center"><span>No.{{ $choicedPokemon->pokedex_number }}</span>{{ $choicedPokemon->name }}</h4>
-        <div class="items-center"><img src="{{ asset($choicedPokemon->image) }}" class="image-size"></div>
-        <h4 class="m-10">{{ $choicedPokemon->description }}</h4>
+        <h3 class="items-center"><span>No.{{ $choicedPokemon->pokedex_number }}</span>{{ $choicedPokemon->name }}</h3>
+        <div class="items-center"><img src="{{ asset($choicedPokemon->image) }}" class="create-image-size"></div>
+        <h4 class="items-center m-create">{{ $choicedPokemon->description }}</h4>
     </div>
     <div>
         <div class="items-center">
-            <form method="post" action="{{ route('posts.store') }}" value="{{ $choicedPokemon->name }}">
+            <form method="post" action="{{ route('posts.store') }}">
                 @csrf
                 <div>
                     <label>
