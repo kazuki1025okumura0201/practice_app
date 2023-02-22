@@ -9,7 +9,7 @@
         // 正誤判定を初期化
         $count = 0;
     @endphp
-    <div class="quiz-content mx-l line-height">
+    <div class="quiz-content mx-l line-height pb-10">
         @foreach ($choicesOfQuiz as $choice)
         @if ($choice->id === $correctPokemon->id)
         @php
