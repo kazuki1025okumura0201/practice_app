@@ -162,7 +162,7 @@ h3 {
 }
 
 .mx-m {
-    margin: 0 100px 0 100px;
+    margin: 0 170px 0 170px;
 }
 
 .p-10 {
@@ -208,3 +208,18 @@ h3 {
     color: rgb(48, 47, 50);
  }
 
+.name-size {
+    font-size: 28px;
+}
+
+.mr-s {
+    margin-right: 160px;
+}
+
+.footer {
+    max-width: 100%;
+}
+
+.pb-10 {
+    padding-bottom: 50px;
+}

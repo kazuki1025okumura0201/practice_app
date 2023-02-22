@@ -11,6 +11,9 @@
             <a href="{{ route('posts.index') }}"><img src="{{ asset('image/title.png') }}" class="title-size"></a>
         </div>
         {{ $slot }}
+        <div>
+            <img src="{{ asset('image/footer.jpeg') }}" class="footer mt-m">
+        </div>
     </div>
 </body>
 </html>
