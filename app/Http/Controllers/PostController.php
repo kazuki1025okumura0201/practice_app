@@ -38,10 +38,9 @@ class PostController extends Controller
             ->with(['choicedPokemon' => $choicedPokemon, 'quizResult' => $quizResult]);
     }
 
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         $pokemonId = $request->input('choiced-pokemon-id');
-
 
         $post = new Post();
         $post->body = $request->body;
@@ -67,7 +66,7 @@ class PostController extends Controller
             ->with(['post' => $post]);
     }
 
-    public function update(Request $request, Post $post)
+    public function update(PostRequest $request, Post $post)
     {
         $post->body = $request->body;
         $post->save();

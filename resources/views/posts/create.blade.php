@@ -16,7 +16,7 @@
     </div>
     <div>
         <div class="items-center">
-            <form method="post" action="{{ route('posts.store') }}" value="{{ $choicedPokemon->name }}">
+            <form method="post" action="{{ route('posts.store') }}">
                 @csrf
                 <div>
                     <label>

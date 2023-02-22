@@ -13,7 +13,7 @@ class PostRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,6 @@ class PostRequest extends FormRequest
     {
         return [
             'body' => 'required|min:5',
-            'quiz_correct' => 'required',
         ];
     }
 

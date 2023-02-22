@@ -17,7 +17,7 @@
                 @endphp
         @endif
         <div class="quiz-object">
-            {{-- 選んだポケモンのデータと正誤判定をcreateアクションに渡す --}}
+            {{-- 正解のポケモンのデータと正誤判定をcreateアクションに渡す --}}
             <a href="{{ route('posts.create', ['choicedPokemonId' => $correctPokemon, 'quizResult' => "$count"]) }}">
                 <div><img src="{{ asset($choice->image) }}" class="image-size"></div>
                 <div class="name-color">{{ $choice->name }}</div>
